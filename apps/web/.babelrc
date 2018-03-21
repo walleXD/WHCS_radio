@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "next/babel",
+    [
+      "env",
+      {
+        "targets": {
+          "node": "6.11.5"
+        }
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": ["transform-runtime", "babel-plugin-transform-decorators-legacy"],
+  "env": {
+    "development": {
+      "plugins": ["inline-dotenv"]
+    },
+    "production": {
+      "plugins": ["transform-inline-environment-variables"]
+    }
+  }
+}

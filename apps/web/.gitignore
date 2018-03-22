@@ -1,3 +1,5 @@
 .firebaserc
 next/
 *.log
+*.env.*
+*.env

@@ -1,6 +1,8 @@
 import React from "react"
 import Typography from "material-ui/Typography"
 
+import withMainLayout from "../layouts/main"
+
 const IndexPage = () => (
   <div>
     <Typography variant="display1" gutterBottom>
@@ -9,4 +11,4 @@ const IndexPage = () => (
   </div>
 )
 
-export default IndexPage
+export default withMainLayout(IndexPage)

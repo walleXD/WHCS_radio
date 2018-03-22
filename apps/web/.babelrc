@@ -1,23 +1,26 @@
 {
-  "presets": [
-    "next/babel",
-    [
-      "env",
-      {
-        "targets": {
-          "node": "6.11.5"
-        }
-      }
-    ],
-    "stage-0"
-  ],
+  "presets": ["next/babel", "es2017", "stage-0"],
   "plugins": ["transform-runtime", "babel-plugin-transform-decorators-legacy"],
   "env": {
     "development": {
-      "plugins": ["inline-dotenv"]
+      "plugins": [
+        [
+          "inline-dotenv",
+          {
+            "path": ".env.development"
+          }
+        ]
+      ]
     },
     "production": {
-      "plugins": ["transform-inline-environment-variables"]
+      "plugins": [
+        [
+          "inline-dotenv",
+          {
+            "path": ".env.production"
+          }
+        ]
+      ]
     }
   }
 }
